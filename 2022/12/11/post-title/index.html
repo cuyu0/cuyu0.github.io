@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>post title | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Typora配置GitHub图床[TOC] 背景当我们想要把本地记录的笔记上传至博客等网站时，会发现本地保存图片的url无法直接解析。如果上传图片，需要手动将本地的图片单独上传，十分麻烦。 解决方案为了解决这个问题，我们在服务端设置一个图床。在使用Typora保存图片时，Typora自动将图片上传至图床并转换成url保存下来，后续想要上传笔记至博客只需要直接复制粘贴即可，十分方便。 操作步骤 Gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="post title">
+<meta property="og:url" content="http://example.com/2022/12/11/post-title/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Typora配置GitHub图床[TOC] 背景当我们想要把本地记录的笔记上传至博客等网站时，会发现本地保存图片的url无法直接解析。如果上传图片，需要手动将本地的图片单独上传，十分麻烦。 解决方案为了解决这个问题，我们在服务端设置一个图床。在使用Typora保存图片时，Typora自动将图片上传至图床并转换成url保存下来，后续想要上传笔记至博客只需要直接复制粘贴即可，十分方便。 操作步骤 Gi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201851585.png?token=A4FXI24PRPGLJAC6IKQZC63DPIDPG">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201852016.png?token=A4FXI2ZSNI65RFZP5G3CVCLDPIDSW">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201853081.png?token=A4FXI2YYDTYHQ4JHXUCINKTDPIDWC">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201854465.png?token=A4FXI27ESSKXGPR3EDTWRE3DPID4C">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201856986.png?token=A4FXI23PP4ZBNBFRTTKO72DDPIEBC">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201857192.png?token=A4FXI26Q5IAS47REKG7CTHLDPIEHM">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201903867.png?token=A4FXI26GTJQYL6XTMZK2HDDDPIE2G">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201906199.png?token=A4FXI25MLB7H53BANDKALYLDPIFHC">
+<meta property="og:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201908365.png?token=A4FXI24TK3LAQENPO5LQMQLDPIFM4">
+<meta property="article:published_time" content="2022-12-11T11:41:44.000Z">
+<meta property="article:modified_time" content="2022-12-11T11:43:18.669Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/cuyu0/Images/master/202211201851585.png?token=A4FXI24PRPGLJAC6IKQZC63DPIDPG">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-post-title" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/11/post-title/" class="article-date">
+  <time class="dt-published" datetime="2022-12-11T11:41:44.000Z" itemprop="datePublished">2022-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      post title
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Typora配置GitHub图床"><a href="#Typora配置GitHub图床" class="headerlink" title="Typora配置GitHub图床"></a>Typora配置GitHub图床</h2><p>[TOC]</p>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>当我们想要把本地记录的笔记上传至博客等网站时，会发现本地保存图片的url无法直接解析。如果上传图片，需要手动将本地的图片单独上传，十分麻烦。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>为了解决这个问题，我们在服务端设置一个图床。在使用Typora保存图片时，Typora自动将图片上传至图床并转换成url保存下来，后续想要上传笔记至博客只需要直接复制粘贴即可，十分方便。</p>
+<h4 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h4><ul>
+<li>Github创建图床</li>
+<li>Github配置token</li>
+<li>配置PicGo</li>
+</ul>
+<h4 id="一、Github创建图床"><a href="#一、Github创建图床" class="headerlink" title="一、Github创建图床"></a>一、Github创建图床</h4><p><a target="_blank" rel="noopener" href="https://github.com/">github</a></p>
+<p>登录账户，创建一个新的仓库，仓库配置都不重要，只要有个仓库就行。</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201851585.png?token=A4FXI24PRPGLJAC6IKQZC63DPIDPG" alt="image-20221120184903741"></p>
+<h4 id="二、Github配置token"><a href="#二、Github配置token" class="headerlink" title="二、Github配置token"></a>二、Github配置token</h4><p>1、点进账户设置</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201852016.png?token=A4FXI2ZSNI65RFZP5G3CVCLDPIDSW" alt="image-20221120185229964"></p>
+<p>2、拉到页面最下方，选择developer setting</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201853081.png?token=A4FXI2YYDTYHQ4JHXUCINKTDPIDWC" alt="image-20221120185324030"></p>
+<p>3、选择generate new token(classic)</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201854465.png?token=A4FXI27ESSKXGPR3EDTWRE3DPID4C" alt="image-20221120185459406"></p>
+<p>4、配置token的具体信息</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201856986.png?token=A4FXI23PP4ZBNBFRTTKO72DDPIEBC" alt="image-20221120185618893"></p>
+<p>5、生成完毕之后，页面会显示token的值，记录并保存下来，因为为了token的安全性，后续再次打开这个页面不会再显示了。</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201857192.png?token=A4FXI26Q5IAS47REKG7CTHLDPIEHM" alt="image-20221120185759129"></p>
+<h4 id="三、配置PicGo"><a href="#三、配置PicGo" class="headerlink" title="三、配置PicGo"></a>三、配置PicGo</h4><p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGo is Here</a></p>
+<p>1、下载并安装PicGo，我的安装路径为<code>D:/PicGo</code></p>
+<p>2、打开PicGo，选择图床设置&#x2F;GitHub</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201903867.png?token=A4FXI26GTJQYL6XTMZK2HDDDPIE2G" alt="image-20221120190301816"></p>
+<p>3、设置仓库名为<code>你的Github账户名/GitHub图床仓库名</code></p>
+<p>4、设定分支为master或其他你想用来存图片的分支</p>
+<p>5、设定Token</p>
+<p>6、点进Typora偏好设置\图像，进行对应配置</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201906199.png?token=A4FXI25MLB7H53BANDKALYLDPIFHC" alt="image-20221120190616125"></p>
+<p>7、验证图片上传选项，PicGo会向你的图床传输几张图片用以验证，若运行结果为success，则图床配置成功</p>
+<p><img src="https://raw.githubusercontent.com/cuyu0/Images/master/202211201908365.png?token=A4FXI24TK3LAQENPO5LQMQLDPIFM4" alt="image-20221120190800305"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/11/post-title/" data-id="clbjdgfo40000jstvc1v60xbx" data-title="post title" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/12/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/11/post-title/">post title</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/11/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
